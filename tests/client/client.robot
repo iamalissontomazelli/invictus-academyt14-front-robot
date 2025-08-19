@@ -1,5 +1,5 @@
 *** Settings ***
-Resource          ../../resources/cadastro.resource
+Resource          ../../resources/client.resource
 Test Setup        Abrir o navegador
 Test Teardown     Fechar o navegador
 
@@ -10,9 +10,10 @@ Cenário de Teste
     Passo 3 - Digitar senha
     Passo 4 - Clicar no botão de login
     Passo 5 - Verificar se o login foi bem-sucedido e clicar em cadastros
-    Passo 6 - Clicar no menu users
+    Passo 6 - Clicar em Cadastro    
+    Passo 7 - Clicar em Cliente 
+
     
 
 
 
-#robot --output tests/logs/output.xml --log tests/logs/log.html --report tests/logs/report.html tests/login.robot
