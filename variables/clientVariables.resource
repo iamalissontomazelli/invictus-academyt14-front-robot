@@ -8,7 +8,7 @@ ${password}    1234@Test
 
 
 #Dados para o cadastro
-${nome}    James Tomazelli Jr.
+${nome}    James Tomazelli Jr
 ${data}    10/03/1992
 ${email}    alissontomazelli20043@invictus.com
 ${clientEmail}    suelythom157@invictus.com
@@ -40,7 +40,8 @@ ${cpfPosition}    id=cpf
 ${cepPosition}    id=zipCode
 ${paisPosition}    id=country
 ${cidadePosition}    id=city
-${bairroPosition}    id=state
+${estadoPosition}    id=state
+${bairroPosition}    id=district
 ${ruaPosition}    id=street
 ${numeroCasaPosition}    id=number
 ${complementoPosition}    id=complement
@@ -69,7 +70,11 @@ ${buttonSalvarUser}    id=save
 ${editarCadastroPosition}    id=edit
 
 
+
 #Clientes 
 ${clientePosition}    id=Cliente
 ${newClientPosition}    id=Novo Cadastro
+${clientEmailPosition}    id=mail
+
+
 
