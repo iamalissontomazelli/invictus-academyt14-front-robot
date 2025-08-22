@@ -46,16 +46,56 @@ Passo 7 - Click em Novo Cadastro
     Click Element    locator=${newClientPosition}
     Sleep    3s
 
-Passo 8 - Preencher Dados 
+Passo 8 - Preencher Dados
     Wait Until Element Is Visible    locator=${fullNamePosition}    timeout=5s
     Input Text    locator=${fullNamePosition}    text=${nome}    
 
     Wait Until Element Is Visible    locator=${dataNascimentoPosition}    timeout=5s
-    Input Text    locator=${dataNascimentoPosition}    text=${data}    
+    Input Text    locator=${dataNascimentoPosition}    text=${data}   
 
-    Wait Until Element Is Visible    locator=${emailPosition}    timeout=15s
-    Input Text    locator=${emailPosition}    text=${clientEmail}    
+    Wait Until Element Is Visible    locator=${clientEmailPosition}    timeout=15s
+    Input Text    locator=${clientEmailPosition}    text=${clientEmail}    
 
     Wait Until Element Is Visible    locator=${telefonePosition}    timeout=5s
     Input Text    locator=${telefonePosition}    text=${telefone}    
+    
+    Wait Until Element Is Visible    locator=${cargoPosition}    timeout=5s
+    Input Text    locator=${cargoPosition}    text=${cargo}    
+    
+    Wait Until Element Is Visible    locator=${rgPosition}    timeout=5s
+    Input Text    locator=${rgPosition}    text=${rg}
+
+    Wait Until Element Is Visible    locator=${cpfPosition}    timeout=5s
+    Input Text    locator=${cpfPosition}    text=${cpf}    
+
+    Wait Until Element Is Visible    locator=${cepPosition}    timeout=5s
+    Input Text    locator=${cepPosition}    text=${cep}
+
+    Wait Until Element Is Visible    locator=${paisPosition}    timeout=5s
+    Input Text    locator=${paisPosition}    text=${pais}    
+
+    Wait Until Element Is Visible    locator=${cidadePosition}    timeout=5s
+    Input Text    locator=${cidadePosition}    text=${cidade}    
+
+    Wait Until Element Is Visible    locator=${estadoPosition}    timeout=5s
+    Input Text    locator=${estadoPosition}    text=${estado}    
+
+    Wait Until Element Is Visible    locator=${bairroPosition}    timeout=5s
+    Input Text    locator=${bairroPosition}    text=${bairro}    
+
+    Wait Until Element Is Visible    locator=${ruaPosition}    timeout=5s
+    Input Text    locator=${ruaPosition}    text=${rua}    
+
+    Wait Until Element Is Visible    locator=${numeroCasaPosition}    timeout=5s
+    Input Text    locator=${numeroCasaPosition}    text=${numero}    
+
+    Wait Until Element Is Visible    locator=${complementoPosition}    timeout=5s
+    Input Text    locator=${complementoPosition}    text=${complemento}    
+Passo 9 - Clicar no botão salvar
+    Wait Until Element Is Visible    locator=${cpfPosition}    timeout=5s
+    Click Button    locator=${buttonSalvarUser}
+    Sleep    15s   
+
+
+
     

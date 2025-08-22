@@ -12,7 +12,8 @@ Cenário de Teste
     Passo 5 - Verificar se o login foi bem-sucedido e clicar em cadastros
     Passo 6 - Clicar em Cliente 
     Passo 7 - Click em Novo Cadastro
-    Passo 8 - Preencher Dados 
+    Passo 8 - Preencher Dados
+    Passo 9 - Clicar no botão salvar
 
     
 
