@@ -9,13 +9,13 @@ ${password}    1234@Test
 
 #Dados para o cadastro
 ${nome}    James Tomazelli Jr
-${data}    10/03/1992
+${data}    10031992
 ${email}    alissontomazelli20043@invictus.com
 ${clientEmail}    suelythom157@invictus.com
 ${telefone}    68989938801
 ${cargo}    Vendedor
-${rg}    253400065
-${cpf}    12343578909
+${rg}    1230872    
+${cpf}    12309826712
 ${accessLevel}    ADMIN
 ${userPassword}    Kmzwa8awaa@
 ${confirmPassword}    Kmzwa8awaa@
@@ -36,7 +36,7 @@ ${mailPosition}    id=mail
 ${telefonePosition}    id=phone
 ${cargoPosition}    id=currentRole
 ${rgPosition}    name=rg
-${cpfPosition}    id=cpf
+${cpfPosition}    name=cpf
 ${cepPosition}    id=zipCode
 ${paisPosition}    id=country
 ${cidadePosition}    id=city
@@ -46,7 +46,6 @@ ${ruaPosition}    id=street
 ${numeroCasaPosition}    id=number
 ${complementoPosition}    id=complement
 ${accessLevelPosition}    id=accessProfile
-${cpfPosition}    id=cpf
 ${passwordPosition}    id=password
 ${confirmPasswordPosition}    id=confirmPassword
 
@@ -77,4 +76,6 @@ ${newClientPosition}    id=Novo Cadastro
 ${clientEmailPosition}    id=mail
 
 
-
+#Editar 
+${editPosition}     id=edit
+${novoNome}    Roberto Jose
