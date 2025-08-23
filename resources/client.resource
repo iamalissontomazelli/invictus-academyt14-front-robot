@@ -98,4 +98,28 @@ Passo 9 - Clicar no botão salvar
 
 
 
-    
+
+# Sessão Editar
+
+
+
+Clicar em editar
+    Wait Until Element Is Visible    locator=${editPosition}    timeout=5s
+    Click Button    locator=${editPosition}
+    Sleep    5s
+
+Editar cadastro de cliente
+            
+    # Editar campo de texto (macOS)
+    Wait Until Element Is Visible    locator=${fullNamePosition}    timeout=10s
+    Wait Until Element Is Enabled    locator=${fullNamePosition}    timeout=10s
+    Scroll Element Into View         locator=${fullNamePosition}
+    Click Element                    locator=${fullNamePosition}
+    Sleep    2s
+    Press Keys                       ${fullNamePosition}    COMMAND+A    
+    Sleep    1s
+    Press Keys                       ${fullNamePosition}    BACKSPACE    
+    Sleep    1s
+    Input Text                       ${fullNamePosition}    ${novoNome}   
+    Sleep    2s 
+    Click Button                     ${buttonSalvarUser}    

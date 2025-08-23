@@ -11,12 +11,7 @@ Cenário de Teste
     Passo 4 - Clicar no botão de login
     Passo 5 - Verificar se o login foi bem-sucedido e clicar em cadastros
     Passo 6 - Clicar em Cliente 
-    Passo 7 - Click em Novo Cadastro
-    Passo 8 - Preencher Dados
-    Passo 9 - Clicar no botão salvar
+    #Testes para editar cliente
+    Clicar em editar
+    Editar cadastro de cliente
 
-    
-
-
-
- 
