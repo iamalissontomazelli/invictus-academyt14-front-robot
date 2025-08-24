@@ -1,220 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-23T16:33:42.316752" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-24T14:11:44.783090" rpa="false" schemaversion="5">
 <suite id="s1" name="Edit" source="/Users/alissontomazelli/Documents/Invictus/invictus-academyt14-front-robot/tests/client/edit.robot">
 <test id="s1-t1" name="Cenário de Teste" line="7">
 <kw name="Abrir o navegador" owner="client" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-08-23T16:33:42.394864" level="INFO">Opening browser 'Chrome' to base url 'https://invictus.qacoders.dev.br/login'.</msg>
-<msg time="2025-08-23T16:33:47.161200" level="WARN">The chromedriver version (138.0.7204.157) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (139.0.7258.139); currently, chromedriver 139.0.7258.138 is recommended for chrome 139.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-08-24T14:11:44.858548" level="INFO">Opening browser 'Chrome' to base url 'https://invictus.qacoders.dev.br/login'.</msg>
+<msg time="2025-08-24T14:11:50.590679" level="WARN">The chromedriver version (138.0.7204.157) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (139.0.7258.139); currently, chromedriver 139.0.7258.138 is recommended for chrome 139.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${urlBase}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-08-23T16:33:42.394766" elapsed="15.353249"/>
+<status status="PASS" start="2025-08-24T14:11:44.858452" elapsed="11.395872"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-08-23T16:33:57.748582" elapsed="0.370253"/>
+<status status="PASS" start="2025-08-24T14:11:56.254596" elapsed="0.367975"/>
 </kw>
-<status status="PASS" start="2025-08-23T16:33:42.394480" elapsed="15.724480"/>
+<status status="PASS" start="2025-08-24T14:11:44.858187" elapsed="11.764509"/>
 </kw>
 <kw name="Passo 1 - Acessar o site" owner="client">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-08-23T16:33:58.119562" level="INFO">Opening url 'https://invictus.qacoders.dev.br/login'</msg>
+<msg time="2025-08-24T14:11:56.623285" level="INFO">Opening url 'https://invictus.qacoders.dev.br/login'</msg>
 <arg>${urlBase}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-08-23T16:33:58.119464" elapsed="0.314358"/>
+<status status="PASS" start="2025-08-24T14:11:56.623187" elapsed="0.391709"/>
 </kw>
-<status status="PASS" start="2025-08-23T16:33:58.119252" elapsed="0.314698"/>
+<status status="PASS" start="2025-08-24T14:11:56.622969" elapsed="0.392000"/>
 </kw>
 <kw name="Passo 2 - Fazer login" owner="client">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${emailPosition}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-23T16:33:58.434600" elapsed="0.010972"/>
+<status status="PASS" start="2025-08-24T14:11:57.015619" elapsed="0.010055"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-23T16:33:58.445840" level="INFO">Typing text 'alissontomazelli@invictus.com.br' into text field 'id=email'.</msg>
+<msg time="2025-08-24T14:11:57.025932" level="INFO">Typing text 'alissontomazelli@invictus.com.br' into text field 'id=email'.</msg>
 <arg>locator=${emailPosition}</arg>
 <arg>text=${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-23T16:33:58.445677" elapsed="0.090369"/>
+<status status="PASS" start="2025-08-24T14:11:57.025771" elapsed="0.093153"/>
 </kw>
-<status status="PASS" start="2025-08-23T16:33:58.434221" elapsed="0.101883"/>
+<status status="PASS" start="2025-08-24T14:11:57.015281" elapsed="0.103701"/>
 </kw>
 <kw name="Passo 3 - Digitar senha" owner="client">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${passwordPosition}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-23T16:33:58.536343" elapsed="0.005352"/>
+<status status="PASS" start="2025-08-24T14:11:57.119227" elapsed="0.005603"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-23T16:33:58.541931" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
+<msg time="2025-08-24T14:11:57.125007" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
 <arg>locator=${passwordPosition}</arg>
 <arg>text=${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-23T16:33:58.541767" elapsed="0.023447"/>
+<status status="PASS" start="2025-08-24T14:11:57.124898" elapsed="0.022289"/>
 </kw>
-<status status="PASS" start="2025-08-23T16:33:58.536223" elapsed="0.029042"/>
+<status status="PASS" start="2025-08-24T14:11:57.119099" elapsed="0.028140"/>
 </kw>
 <kw name="Passo 4 - Clicar no botão de login" owner="client">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${loginButtonPosition}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-23T16:33:58.565505" elapsed="0.005650"/>
+<status status="PASS" start="2025-08-24T14:11:57.147475" elapsed="0.005623"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-08-23T16:33:58.571319" level="INFO">Clicking button 'id=login'.</msg>
+<msg time="2025-08-24T14:11:57.153273" level="INFO">Clicking button 'id=login'.</msg>
 <arg>locator=${loginButtonPosition}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-23T16:33:58.571222" elapsed="0.026501"/>
+<status status="PASS" start="2025-08-24T14:11:57.153173" elapsed="0.027756"/>
 </kw>
-<status status="PASS" start="2025-08-23T16:33:58.565385" elapsed="0.032394"/>
+<status status="PASS" start="2025-08-24T14:11:57.147357" elapsed="0.033628"/>
 </kw>
 <kw name="Passo 5 - Verificar se o login foi bem-sucedido e clicar em cadastros" owner="client">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${cadastrosPosition}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-23T16:33:58.598021" elapsed="3.583136"/>
+<status status="PASS" start="2025-08-24T14:11:57.181250" elapsed="3.594517"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-23T16:34:02.181474" level="INFO">Clicking element 'class=css-11z55jn'.</msg>
+<msg time="2025-08-24T14:12:00.776453" level="INFO">Clicking element 'class=css-11z55jn'.</msg>
 <arg>locator=${cadastrosPosition}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-23T16:34:02.181286" elapsed="0.027295"/>
+<status status="PASS" start="2025-08-24T14:12:00.776021" elapsed="0.036697"/>
 </kw>
-<status status="PASS" start="2025-08-23T16:33:58.597895" elapsed="3.610765"/>
+<status status="PASS" start="2025-08-24T14:11:57.181097" elapsed="3.631699"/>
 </kw>
 <kw name="Passo 6 - Clicar em Cliente" owner="client">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${clientePosition}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-23T16:34:02.209450" elapsed="0.006978"/>
+<status status="PASS" start="2025-08-24T14:12:00.813329" elapsed="0.007488"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-23T16:34:02.216650" level="INFO">Clicking element 'id=Cliente'.</msg>
+<msg time="2025-08-24T14:12:00.821049" level="INFO">Clicking element 'id=Cliente'.</msg>
 <arg>locator=${clientePosition}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-23T16:34:02.216523" elapsed="0.021949"/>
+<status status="PASS" start="2025-08-24T14:12:00.820915" elapsed="0.021748"/>
 </kw>
-<status status="PASS" start="2025-08-23T16:34:02.208903" elapsed="0.029635"/>
+<status status="PASS" start="2025-08-24T14:12:00.812979" elapsed="0.029747"/>
 </kw>
 <kw name="Clicar em editar" owner="client">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${editPosition}</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-23T16:34:02.238828" elapsed="2.104076"/>
+<status status="PASS" start="2025-08-24T14:12:00.843002" elapsed="2.767288"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-08-23T16:34:04.343275" level="INFO">Clicking button 'id=edit'.</msg>
+<msg time="2025-08-24T14:12:03.611083" level="INFO">Clicking button 'id=edit'.</msg>
 <arg>locator=${editPosition}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-23T16:34:04.343059" elapsed="0.101029"/>
+<status status="PASS" start="2025-08-24T14:12:03.610647" elapsed="0.111809"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-23T16:34:09.445170" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-08-24T14:12:08.723866" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-23T16:34:04.444286" elapsed="5.001222"/>
+<status status="PASS" start="2025-08-24T14:12:03.722660" elapsed="5.001616"/>
 </kw>
-<status status="PASS" start="2025-08-23T16:34:02.238671" elapsed="7.207104"/>
+<status status="PASS" start="2025-08-24T14:12:00.842866" elapsed="7.881667"/>
 </kw>
 <kw name="Editar cadastro de cliente" owner="client">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${fullNamePosition}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-23T16:34:09.447013" elapsed="0.014954"/>
+<status status="PASS" start="2025-08-24T14:12:08.725792" elapsed="0.015459"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>locator=${fullNamePosition}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-08-23T16:34:09.462140" elapsed="0.010359"/>
+<status status="PASS" start="2025-08-24T14:12:08.741450" elapsed="0.010473"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>locator=${fullNamePosition}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-08-23T16:34:09.472605" elapsed="0.265079"/>
+<status status="PASS" start="2025-08-24T14:12:08.752027" elapsed="0.265290"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-23T16:34:09.738482" level="INFO">Clicking element 'id=fullName'.</msg>
+<msg time="2025-08-24T14:12:09.018262" level="INFO">Clicking element 'id=fullName'.</msg>
 <arg>locator=${fullNamePosition}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-23T16:34:09.738040" elapsed="0.041101"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-23T16:34:11.780973" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-23T16:34:09.779336" elapsed="2.001957"/>
+<status status="PASS" start="2025-08-24T14:12:09.017751" elapsed="0.042245"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-08-23T16:34:11.782909" level="INFO">Sending key(s) ('COMMAND+A',) to id=fullName element.</msg>
-<msg time="2025-08-23T16:34:12.058280" level="INFO">Pressing special key COMMAND down.</msg>
-<msg time="2025-08-23T16:34:12.058454" level="INFO">Sending key A</msg>
-<msg time="2025-08-23T16:34:12.058503" level="INFO">Releasing special key COMMAND.</msg>
+<msg time="2025-08-24T14:12:09.060872" level="INFO">Sending key(s) ('COMMAND+A', 'timeout=15s') to id=fullName element.</msg>
+<msg time="2025-08-24T14:12:09.333804" level="INFO">Pressing special key COMMAND down.</msg>
+<msg time="2025-08-24T14:12:09.333933" level="INFO">Sending key A</msg>
+<msg time="2025-08-24T14:12:09.333976" level="INFO">Releasing special key COMMAND.</msg>
+<msg time="2025-08-24T14:12:09.342284" level="INFO">Sending keys timeout=15s</msg>
 <arg>${fullNamePosition}</arg>
 <arg>COMMAND+A</arg>
+<arg>timeout=15s</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-08-23T16:34:11.781763" elapsed="0.284296"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-23T16:34:13.067971" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-23T16:34:12.066375" elapsed="1.001930"/>
+<status status="PASS" start="2025-08-24T14:12:09.060184" elapsed="0.303669"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-08-23T16:34:13.069795" level="INFO">Sending key(s) ('BACKSPACE',) to id=fullName element.</msg>
-<msg time="2025-08-23T16:34:13.344460" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-08-23T16:34:13.344631" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-08-24T14:12:09.364394" level="INFO">Sending key(s) ('BACKSPACE', 'timeout=15s') to id=fullName element.</msg>
+<msg time="2025-08-24T14:12:09.633739" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-08-24T14:12:09.633894" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-08-24T14:12:09.642498" level="INFO">Sending keys timeout=15s</msg>
 <arg>${fullNamePosition}</arg>
 <arg>BACKSPACE</arg>
+<arg>timeout=15s</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-08-23T16:34:13.068794" elapsed="0.284598"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-23T16:34:14.354000" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-23T16:34:13.353630" elapsed="1.000554"/>
+<status status="PASS" start="2025-08-24T14:12:09.363999" elapsed="0.297946"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-23T16:34:14.354744" level="INFO">Typing text 'Roberto Jose' into text field 'id=fullName'.</msg>
+<msg time="2025-08-24T14:12:09.662389" level="INFO">Typing text 'Roberto Jose' into text field 'id=fullName'.</msg>
 <arg>${fullNamePosition}</arg>
 <arg>${novoNome}</arg>
+<arg>timeout=15s</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-23T16:34:14.354420" elapsed="0.046852"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-23T16:34:16.402439" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-23T16:34:14.401415" elapsed="2.001199"/>
+<status status="PASS" start="2025-08-24T14:12:09.662130" elapsed="0.033335"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-08-23T16:34:16.403166" level="INFO">Clicking button 'id=save'.</msg>
+<msg time="2025-08-24T14:12:09.695774" level="INFO">Clicking button 'id=save'.</msg>
 <arg>${buttonSalvarUser}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-23T16:34:16.402848" elapsed="0.044828"/>
+<status status="PASS" start="2025-08-24T14:12:09.695634" elapsed="0.033323"/>
 </kw>
-<status status="PASS" start="2025-08-23T16:34:09.446415" elapsed="7.001339"/>
+<status status="PASS" start="2025-08-24T14:12:08.725160" elapsed="1.003860"/>
 </kw>
 <kw name="Fechar o navegador" owner="client" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-08-23T16:34:16.448222" elapsed="0.077195"/>
+<status status="PASS" start="2025-08-24T14:12:09.729400" elapsed="0.075420"/>
 </kw>
-<status status="PASS" start="2025-08-23T16:34:16.448070" elapsed="0.077412"/>
+<status status="PASS" start="2025-08-24T14:12:09.729260" elapsed="0.075648"/>
 </kw>
-<status status="PASS" start="2025-08-23T16:33:42.394215" elapsed="34.131321"/>
+<status status="PASS" start="2025-08-24T14:11:44.857910" elapsed="24.947066"/>
 </test>
-<status status="PASS" start="2025-08-23T16:33:42.317218" elapsed="34.208547"/>
+<status status="PASS" start="2025-08-24T14:11:44.783624" elapsed="25.021585"/>
 </suite>
 <statistics>
 <total>
@@ -227,6 +208,6 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2025-08-23T16:33:47.161200" level="WARN">The chromedriver version (138.0.7204.157) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (139.0.7258.139); currently, chromedriver 139.0.7258.138 is recommended for chrome 139.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-08-24T14:11:50.590679" level="WARN">The chromedriver version (138.0.7204.157) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (139.0.7258.139); currently, chromedriver 139.0.7258.138 is recommended for chrome 139.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

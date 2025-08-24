@@ -114,12 +114,8 @@ Editar cadastro de cliente
     Wait Until Element Is Visible    locator=${fullNamePosition}    timeout=10s
     Wait Until Element Is Enabled    locator=${fullNamePosition}    timeout=10s
     Scroll Element Into View         locator=${fullNamePosition}
-    Click Element                    locator=${fullNamePosition}
-    Sleep    2s
-    Press Keys                       ${fullNamePosition}    COMMAND+A    
-    Sleep    1s
-    Press Keys                       ${fullNamePosition}    BACKSPACE    
-    Sleep    1s
-    Input Text                       ${fullNamePosition}    ${novoNome}   
-    Sleep    2s 
+    Click Element                    locator=${fullNamePosition}    
+    Press Keys                       ${fullNamePosition}    COMMAND+A    timeout=15s
+    Press Keys                       ${fullNamePosition}    BACKSPACE    timeout=15s
+    Input Text                       ${fullNamePosition}    ${novoNome}    
     Click Button                     ${buttonSalvarUser}    
