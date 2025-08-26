@@ -1,6 +1,6 @@
 *** Settings ***
 
-Resource    ../variables/clientVariables.resource
+Resource    ../resources/variables/clientVariables.resource
 Library    SeleniumLibrary
 
 
