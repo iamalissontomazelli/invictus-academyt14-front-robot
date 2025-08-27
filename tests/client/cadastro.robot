@@ -4,7 +4,7 @@ Test Setup        Abrir o navegador
 Test Teardown     Fechar o navegador
 
 *** Test Cases ***
-Cenário de Teste
+TC01- Cadastrar Cliente com sucesso
     Passo 1 - Acessar o site
     Passo 2 - Fazer login
     Passo 3 - Digitar senha
