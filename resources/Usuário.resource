@@ -38,4 +38,3 @@ Passo 7 - Clicar no botão salvar
     Click Button    locator=${buttonSalvarUser}
     Sleep    7s   
 
-passo 8
