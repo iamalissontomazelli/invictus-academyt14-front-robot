@@ -1,6 +1,7 @@
 *** Settings ***
 
 Resource     ../resources/variables/boardVariables.resource
+Resource    ../resources/variables/clientVariables.resource
 Library    SeleniumLibrary
 Library   String
 
