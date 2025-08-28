@@ -1,0 +1,49 @@
+name: Robot Tests - invictus-academy-front 👷
+ 
+on:
+  push:
+    branches: [main]
+ 
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+ 
+jobs:
+  test:
+    name: Front Tests Invictus
+    runs-on: ubuntu-latest
+ 
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: https://github.com/iamalissontomazelli/invictus-academyt14-front-robot.git
+ 
+    steps:
+      - run: echo "🚀 Clone repository on Invictus Virtual Machine 🚀"
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+ 
+      - run: echo "🌱 Install Python v3.12 🌱"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+ 
+      - run: echo "➕ Install Dependencies of Invictu's Project ➕"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+ 
+      - run: echo "🤖 Execute tests Frontend of Invictus 🤖"
+      - name: Run Robot Framework tests
+        run: robot --outputdir logs/ tests/
+ 
+      - run: echo "📝 Saving logs Tests 📝"
+      - name: Upload Logs
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: logs-tests
+          path: logs/
