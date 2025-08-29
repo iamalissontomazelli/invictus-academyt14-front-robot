@@ -4,12 +4,11 @@ Test Setup        Abrir o navegador
 Test Teardown     Fechar o navegador
 
 *** Test Cases ***
-Cadastro de Usuário
+Editar cadastro de usuário
     Passo 0 - Acessar o site
     Passo 1 - Fazer login com sysadmin
     Passo 2 - Verificar se o login foi bem-sucedido e clicar em cadastros
     Clicar em Usuário 
-    Clicar em Novo Cadastro
-    Criar dados do usuário
-    Preencher Dados
-    Clicar no botão salvar
+    
+    Clicar em editar
+    Editar cadastro de usuário
