@@ -33,11 +33,19 @@ jobs:
 
       - name: Install project dependencies
         run: pip install -r requirements.txt
+        
+      # Passo adicionado para garantir que o ambiente está limpo
+      - name: Clean up processes
+        run: |
+          echo "Buscando processos do Chrome e Chromedriver para encerrar..."
+          killall chrome || true
+          killall chromedriver || true
+          echo "Processos encerrados (se existiam)."
 
       - name: Run Robot Framework tests
         env:
-          # Força o Chrome a usar um profile temporário único por execução
-         BROWSER_OPTIONS: "--headless=new --no-sandbox --disable-dev-shm-usage"
+          # Opções para a execução headless e em ambientes de CI/CD
+          BROWSER_OPTIONS: "--headless=new --no-sandbox --disable-dev-shm-usage"
         run: |
           robot --loglevel TRACE --outputdir logs/ --variable BROWSER_OPTIONS:"$BROWSER_OPTIONS" tests/
 
@@ -47,4 +55,3 @@ jobs:
         with:
           name: logs-tests
           path: logs/
-
