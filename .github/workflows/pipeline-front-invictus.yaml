@@ -23,13 +23,16 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: echo "🌍 Install Chromium + Chromedriver 🌍"
-      - name: Install Chromium
+      - run: echo "🌍 Install Google Chrome Stable 🌍"
+      - name: Install Google Chrome
         run: |
           sudo apt-get update
-          sudo apt-get install -y chromium-browser chromium-chromedriver
-          which chromium-browser
-          which chromedriver
+          sudo apt-get install -y wget gnupg2
+          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+          google-chrome --version
 
       - run: echo "➕ Install Dependencies of Invictu's Project ➕"
       - name: Install dependencies
@@ -37,9 +40,6 @@ jobs:
 
       - run: echo "🤖 Execute tests Frontend of Invictus 🤖"
       - name: Run Robot Framework tests
-        env:
-          CHROME_BIN: /usr/bin/chromium-browser
-          CHROMEDRIVER_BIN: /usr/bin/chromedriver
         run: |
           robot --outputdir logs/ tests/
 
