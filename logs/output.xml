@@ -1,285 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-27T20:53:28.137349" rpa="false" schemaversion="5">
-<suite id="s1" name="Cadastro" source="C:\Users\lucas\Projeto final Front\invictus-academyt14-front-robot\tests\Usuário\cadastro.robot">
-<test id="s1-t1" name="Cadastro de Usuário" line="7">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-28T21:01:16.241979" rpa="false" schemaversion="5">
+<suite id="s1" name="Edit" source="C:\Users\lucas\Projeto final Front\invictus-academyt14-front-robot\tests\Usuário\edit.robot">
+<test id="s1-t1" name="Editar cadastro de usuário" line="7">
 <kw name="Abrir o navegador" owner="main" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:28.435028" level="INFO">Opening browser 'Chrome' to base url 'https://invictus.qacoders.dev.br/login'.</msg>
-<msg time="2025-08-27T20:53:28.630880" level="WARN">Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)</msg>
-<msg time="2025-08-27T20:53:28.631477" level="WARN">The chromedriver version (138.0.7204.168) detected in PATH at C:\Users\lucas\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (139.0.7258.139); currently, chromedriver  is recommended for chrome 139.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-08-28T21:01:16.487152" level="INFO">Opening browser 'Chrome' to base url 'https://invictus.qacoders.dev.br/login'.</msg>
+<msg time="2025-08-28T21:01:16.598896" level="WARN">The chromedriver version (138.0.7204.168) detected in PATH at C:\Users\lucas\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (139.0.7258.139); currently, chromedriver 139.0.7258.154 is recommended for chrome 139.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${urlBase}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-08-27T20:53:28.434696" elapsed="5.253067"/>
+<status status="PASS" start="2025-08-28T21:01:16.486966" elapsed="3.858264"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-08-27T20:53:33.688059" elapsed="0.032906"/>
+<status status="PASS" start="2025-08-28T21:01:20.345463" elapsed="0.037136"/>
 </kw>
-<status status="PASS" start="2025-08-27T20:53:28.433933" elapsed="5.287296"/>
+<status status="PASS" start="2025-08-28T21:01:16.486331" elapsed="3.896498"/>
 </kw>
 <kw name="Passo 0 - Acessar o site" owner="main">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:33.722271" level="INFO">Opening url 'https://invictus.qacoders.dev.br/login'</msg>
+<msg time="2025-08-28T21:01:20.383770" level="INFO">Opening url 'https://invictus.qacoders.dev.br/login'</msg>
 <arg>${urlBase}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-08-27T20:53:33.722056" elapsed="0.252470"/>
+<status status="PASS" start="2025-08-28T21:01:20.383584" elapsed="0.243210"/>
 </kw>
-<status status="PASS" start="2025-08-27T20:53:33.721668" elapsed="0.253082"/>
+<status status="PASS" start="2025-08-28T21:01:20.383190" elapsed="0.243713"/>
 </kw>
 <kw name="Passo 1 - Fazer login com sysadmin" owner="main">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${emailPosition}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-27T20:53:33.975632" elapsed="0.025748"/>
+<status status="PASS" start="2025-08-28T21:01:20.627456" elapsed="0.016978"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:34.002264" level="INFO">Typing text 'sysadmin@qacoders.com' into text field 'id=email'.</msg>
+<msg time="2025-08-28T21:01:20.644933" level="INFO">Typing text 'sysadmin@qacoders.com' into text field 'id=email'.</msg>
 <arg>locator=${emailPosition}</arg>
 <arg>text=${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-27T20:53:34.001739" elapsed="0.131252"/>
+<status status="PASS" start="2025-08-28T21:01:20.644601" elapsed="0.123976"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${passwordPosition}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-27T20:53:34.133256" elapsed="0.014262"/>
+<status status="PASS" start="2025-08-28T21:01:20.768733" elapsed="0.011250"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:34.148252" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
+<msg time="2025-08-28T21:01:20.780371" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
 <arg>locator=${passwordPosition}</arg>
 <arg>text=${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-27T20:53:34.147928" elapsed="0.079442"/>
+<status status="PASS" start="2025-08-28T21:01:20.780135" elapsed="0.076739"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${loginButtonPosition}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-27T20:53:34.227831" elapsed="0.017453"/>
+<status status="PASS" start="2025-08-28T21:01:20.857042" elapsed="0.014812"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:34.245816" level="INFO">Clicking button 'id=login'.</msg>
+<msg time="2025-08-28T21:01:20.872260" level="INFO">Clicking button 'id=login'.</msg>
 <arg>locator=${loginButtonPosition}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-27T20:53:34.245514" elapsed="0.072910"/>
+<status status="PASS" start="2025-08-28T21:01:20.872019" elapsed="0.064251"/>
 </kw>
-<status status="PASS" start="2025-08-27T20:53:33.975182" elapsed="0.343339"/>
+<status status="PASS" start="2025-08-28T21:01:20.627236" elapsed="0.309135"/>
 </kw>
 <kw name="Passo 2 - Verificar se o login foi bem-sucedido e clicar em cadastros" owner="main">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${cadastrosPosition}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-27T20:53:34.319294" elapsed="1.263969"/>
+<status status="PASS" start="2025-08-28T21:01:20.936915" elapsed="1.693761"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:35.583601" level="INFO">Clicking element 'class=css-11z55jn'.</msg>
+<msg time="2025-08-28T21:01:22.631155" level="INFO">Clicking element 'class=css-11z55jn'.</msg>
 <arg>locator=${cadastrosPosition}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-27T20:53:35.583409" elapsed="0.067816"/>
+<status status="PASS" start="2025-08-28T21:01:22.630880" elapsed="0.046067"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-27T20:53:40.652029" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-08-28T21:01:27.677872" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-27T20:53:35.651379" elapsed="5.000840"/>
+<status status="PASS" start="2025-08-28T21:01:22.677107" elapsed="5.000987"/>
 </kw>
-<status status="PASS" start="2025-08-27T20:53:34.318965" elapsed="6.333569"/>
+<status status="PASS" start="2025-08-28T21:01:20.936700" elapsed="6.741628"/>
 </kw>
-<kw name="Passo 6 - Clicar em Usuário" owner="Usuário">
+<kw name="Clicar em Usuário" owner="Usuário">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${usuárioPosition}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-27T20:53:40.654602" elapsed="0.019484"/>
+<status status="PASS" start="2025-08-28T21:01:27.679482" elapsed="0.021110"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:40.674720" level="INFO">Clicking element 'id=Usuários'.</msg>
+<msg time="2025-08-28T21:01:27.701067" level="INFO">Clicking element 'id=Usuários'.</msg>
 <arg>locator=${usuárioPosition}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-27T20:53:40.674357" elapsed="0.087674"/>
+<status status="PASS" start="2025-08-28T21:01:27.700799" elapsed="0.045348"/>
 </kw>
-<status status="PASS" start="2025-08-27T20:53:40.654005" elapsed="0.108217"/>
+<status status="PASS" start="2025-08-28T21:01:27.679031" elapsed="0.067243"/>
 </kw>
-<kw name="Passo 7 - Click em Novo Cadastro" owner="Usuário">
+<kw name="Clicar em editar" owner="Usuário">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>locator=${newUserPosition}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-27T20:53:40.763169" elapsed="0.024770"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:40.788576" level="INFO">Clicking element 'id=Novo Cadastro'.</msg>
-<arg>locator=${newUserPosition}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-27T20:53:40.788217" elapsed="0.116529"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-27T20:53:43.905994" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-27T20:53:40.905082" elapsed="3.001078"/>
-</kw>
-<status status="PASS" start="2025-08-27T20:53:40.762703" elapsed="3.143568"/>
-</kw>
-<kw name="Criar dados do usuário" owner="main">
-<kw name="Generate Random String" owner="String">
-<msg time="2025-08-27T20:53:43.907769" level="INFO">${palavra_randomica} = OqMPolic</msg>
-<var>${palavra_randomica}</var>
-<arg>length=8</arg>
-<arg>chars=[LETTERS]</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<status status="PASS" start="2025-08-27T20:53:43.907490" elapsed="0.000312"/>
-</kw>
-<kw name="Convert To Lower Case" owner="String">
-<msg time="2025-08-27T20:53:43.908098" level="INFO">${palavra_randomica} = oqmpolic</msg>
-<var>${palavra_randomica}</var>
-<arg>${palavra_randomica}</arg>
-<doc>Converts string to lower case.</doc>
-<status status="PASS" start="2025-08-27T20:53:43.907931" elapsed="0.000196"/>
-</kw>
-<kw name="Generate Random String" owner="String">
-<msg time="2025-08-27T20:53:43.908697" level="INFO">${cpf_randomico} = 19061328658</msg>
-<var>${cpf_randomico}</var>
-<arg>length=11</arg>
-<arg>chars=[NUMBERS]</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<status status="PASS" start="2025-08-27T20:53:43.908268" elapsed="0.000490"/>
-</kw>
-<kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2025-08-27T20:53:43.911413" level="INFO">${NOME_RAMDOM} = Toqmpolic Loqmpolic</msg>
-<arg>${NOME_RAMDOM}</arg>
-<arg>T${palavra_randomica} L${palavra_randomica}</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2025-08-27T20:53:43.908997" elapsed="0.002519"/>
-</kw>
-<kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2025-08-27T20:53:43.919320" level="INFO">${CPF_RAMDOM} = 19061328658</msg>
-<arg>${CPF_RAMDOM}</arg>
-<arg>${cpf_randomico}</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2025-08-27T20:53:43.911777" elapsed="0.007746"/>
-</kw>
-<kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2025-08-27T20:53:43.921694" level="INFO">${EMAIL_RAMDOM} = oqmpolic@qacoders.com.br</msg>
-<arg>${EMAIL_RAMDOM}</arg>
-<arg>${palavra_randomica}@qacoders.com.br</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2025-08-27T20:53:43.919714" elapsed="0.002066"/>
-</kw>
-<status status="PASS" start="2025-08-27T20:53:43.907215" elapsed="0.014671"/>
-</kw>
-<kw name="Passo 8 - Preencher Dados" owner="Usuário">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>locator=${fullNamePosition}</arg>
+<arg>locator=${editPosition}</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-27T20:53:43.922730" elapsed="0.018459"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:43.942050" level="INFO">Typing text 'Toqmpolic Loqmpolic' into text field 'id=fullName'.</msg>
-<arg>locator=${fullNamePosition}</arg>
-<arg>text=${NOME_RAMDOM}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-27T20:53:43.941540" elapsed="0.088071"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>locator=${userEmailPosition}</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-27T20:53:44.029879" elapsed="0.013397"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:44.043780" level="INFO">Typing text 'oqmpolic@qacoders.com.br' into text field 'id=mail'.</msg>
-<arg>locator=${userEmailPosition}</arg>
-<arg>text=${EMAIL_RAMDOM}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-27T20:53:44.043476" elapsed="0.088724"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>locator=${accessLevelPosition}</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-27T20:53:44.132464" elapsed="0.018503"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:44.152035" level="INFO">Typing text 'ADMIN' into text field 'id=accessProfile'.</msg>
-<arg>locator=${accessLevelPosition}</arg>
-<arg>text=${accessLevel}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-27T20:53:44.151347" elapsed="0.086355"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>locator=${cpfPosition}</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-27T20:53:44.237909" elapsed="0.015848"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:44.254283" level="INFO">Typing text '19061328658' into text field 'name=cpf'.</msg>
-<arg>locator=${cpfPosition}</arg>
-<arg>text=${CPF_RAMDOM}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-27T20:53:44.253972" elapsed="0.079564"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>locator=${passwordPosition}</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-27T20:53:44.333758" elapsed="0.013284"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:44.347578" level="INFO">Typing text '159753@lkjh' into text field 'id=password'.</msg>
-<arg>locator=${passwordPosition}</arg>
-<arg>text=${userPassword}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-27T20:53:44.347258" elapsed="0.086427"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>locator=${confirmPasswordPosition}</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-27T20:53:44.433932" elapsed="0.014381"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:44.448833" level="INFO">Typing text '159753@lkjh' into text field 'id=confirmPassword'.</msg>
-<arg>locator=${confirmPasswordPosition}</arg>
-<arg>text=${confirmPassword}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-27T20:53:44.448513" elapsed="0.061510"/>
-</kw>
-<status status="PASS" start="2025-08-27T20:53:43.922407" elapsed="0.587748"/>
-</kw>
-<kw name="Passo 9 - Clicar no botão salvar" owner="Usuário">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>locator=${cpfPosition}</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-27T20:53:44.510935" elapsed="0.013293"/>
+<status status="PASS" start="2025-08-28T21:01:27.747062" elapsed="0.243406"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-08-27T20:53:44.525041" level="INFO">Clicking button 'id=save'.</msg>
-<arg>locator=${buttonSalvarUser}</arg>
+<msg time="2025-08-28T21:01:27.991034" level="INFO">Clicking button 'id=edit'.</msg>
+<arg>locator=${editPosition}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-27T20:53:44.524581" elapsed="0.070869"/>
+<status status="PASS" start="2025-08-28T21:01:27.990742" elapsed="0.278756"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-27T20:53:51.596826" level="INFO">Slept 7 seconds.</msg>
-<arg>7s</arg>
+<msg time="2025-08-28T21:01:31.270014" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-27T20:53:44.595664" elapsed="7.001283"/>
+<status status="PASS" start="2025-08-28T21:01:28.269711" elapsed="3.000399"/>
 </kw>
-<status status="PASS" start="2025-08-27T20:53:44.510576" elapsed="7.086461"/>
+<status status="PASS" start="2025-08-28T21:01:27.746709" elapsed="3.523476"/>
+</kw>
+<kw name="Editar cadastro de usuário" owner="Usuário">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${fullNamePosition}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-28T21:01:31.270656" elapsed="0.010421"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>locator=${fullNamePosition}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-08-28T21:01:31.281219" elapsed="0.012593"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=${fullNamePosition}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-08-28T21:01:31.293971" elapsed="0.276546"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-28T21:01:31.570906" level="INFO">Clicking element 'id=fullName'.</msg>
+<arg>locator=${fullNamePosition}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-28T21:01:31.570684" elapsed="0.044826"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-28T21:01:31.615957" level="INFO">Typing text 'Lucas Peres' into text field 'id=fullName'.</msg>
+<arg>${EditfullNamePosition}</arg>
+<arg>${novoNome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-28T21:01:31.615702" elapsed="0.069663"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-28T21:01:31.685864" level="INFO">Clicking button 'id=save'.</msg>
+<arg>${buttonSalvarUser}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-28T21:01:31.685674" elapsed="0.055775"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-08-28T21:01:34.742488" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-08-28T21:01:31.741664" elapsed="3.000972"/>
+</kw>
+<status status="PASS" start="2025-08-28T21:01:31.270451" elapsed="3.472301"/>
 </kw>
 <kw name="Fechar o navegador" owner="main" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-08-27T20:53:51.598122" elapsed="2.352131"/>
+<status status="PASS" start="2025-08-28T21:01:34.743572" elapsed="2.265999"/>
 </kw>
-<status status="PASS" start="2025-08-27T20:53:51.597842" elapsed="2.352577"/>
+<status status="PASS" start="2025-08-28T21:01:34.743311" elapsed="2.266377"/>
 </kw>
-<status status="PASS" start="2025-08-27T20:53:28.433310" elapsed="25.517332"/>
+<status status="PASS" start="2025-08-28T21:01:16.485733" elapsed="20.524139"/>
 </test>
-<status status="PASS" start="2025-08-27T20:53:28.138493" elapsed="25.813017"/>
+<status status="PASS" start="2025-08-28T21:01:16.243103" elapsed="20.767444"/>
 </suite>
 <statistics>
 <total>
@@ -288,11 +183,10 @@
 <tag>
 </tag>
 <suite>
-<stat name="Cadastro" id="s1" pass="1" fail="0" skip="0">Cadastro</stat>
+<stat name="Edit" id="s1" pass="1" fail="0" skip="0">Edit</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-08-27T20:53:28.630880" level="WARN">Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)</msg>
-<msg time="2025-08-27T20:53:28.631477" level="WARN">The chromedriver version (138.0.7204.168) detected in PATH at C:\Users\lucas\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (139.0.7258.139); currently, chromedriver  is recommended for chrome 139.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-08-28T21:01:16.598896" level="WARN">The chromedriver version (138.0.7204.168) detected in PATH at C:\Users\lucas\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (139.0.7258.139); currently, chromedriver 139.0.7258.154 is recommended for chrome 139.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

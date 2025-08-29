@@ -40,8 +40,7 @@ ${cadastrosPosition}      class=css-11z55jn
 ${usuariosPosition}       id=Usuários
 ${novoCadastroPosition}    class=css-fvzsut
 ${buttonSalvarUser}    id=save
-${editarCadastroPosition}    id=edit
 
-
+${EditfullNamePosition}    id=fullName
 ${editPosition}     id=edit
-${novoNome}    Carlos Alberto
+${novoNome}    Lucas Peres
