@@ -1,6 +1,7 @@
 *** Settings ***
 Resource          ../../resources/client.resource
 Resource      ../../resources/main.resource
+Resource    ../../resources/company.resource
 
 
 Test Setup        Abrir o navegador

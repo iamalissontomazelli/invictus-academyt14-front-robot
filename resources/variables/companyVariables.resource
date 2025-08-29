@@ -53,5 +53,9 @@ ${numeroField}          id=number
 ${complementoField}     id=complement
 ${saveButton}           id=save
 
+#Editar 
+${editPosition}     id=edit
+
+
 # Mensagem de sucesso
 ${successMessage}       xpath=//div[contains(text(),"Cadastro realizado com sucesso")]
