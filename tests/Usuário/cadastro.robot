@@ -3,8 +3,6 @@ Resource          ../../resources/Usuário.resource
 Test Setup        Abrir o navegador
 Test Teardown     Fechar o navegador
 
-*** Variables ***
-${chrome_options}=    Create Dictionary    args=--headless=new,--no-sandbox,--disable-dev-shm-usage
 
 *** Test Cases ***
 Cadastro de Usuário
