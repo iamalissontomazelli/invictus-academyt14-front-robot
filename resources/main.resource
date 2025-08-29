@@ -5,8 +5,9 @@ Resource    ../resources/variables/clientVariables.resource
 Library    SeleniumLibrary
 Library   String
 
+
 *** Variables ***
- ${chrome_options}=    Create Dictionary    args=--headless=new,--no-sandbox,--disable-dev-shm-usage
+${chrome_options}=     Create Dictionary     args=--headless=new,--no-sandbox,--disable-dev-shm-usage
 
 *** Keywords ***
   
