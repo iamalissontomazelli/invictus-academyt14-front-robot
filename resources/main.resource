@@ -5,6 +5,9 @@ Resource    ../resources/variables/clientVariables.resource
 Library    SeleniumLibrary
 Library   String
 
+*** Variables ***
+ ${chrome_options}=    Create Dictionary    args=--headless=new,--no-sandbox,--disable-dev-shm-usage
+
 *** Keywords ***
   
 Configurar navegador
@@ -12,7 +15,6 @@ Configurar navegador
     Set Selenium Speed    3s
 
 Abrir o navegador
-    ${chrome_options}=    Create Dictionary    args=--headless=new,--no-sandbox,--disable-dev-shm-usage
     Open Browser    ${urlBase}    ${browser}   options=${BROWSER_OPTIONS}
     Maximize Browser Window
 
