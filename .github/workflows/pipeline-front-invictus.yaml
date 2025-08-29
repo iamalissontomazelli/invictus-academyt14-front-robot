@@ -37,7 +37,7 @@ jobs:
       - name: Run Robot Framework tests
         env:
           # Força o Chrome a usar um profile temporário único por execução
-          BROWSER_OPTIONS: "--headless=new --no-sandbox --disable-dev-shm-usage --user-data-dir=/tmp/chrome-${{ github.run_id }}"
+         BROWSER_OPTIONS: "--headless=new --no-sandbox --disable-dev-shm-usage"
         run: |
           robot --loglevel TRACE --outputdir logs/ --variable BROWSER_OPTIONS:"$BROWSER_OPTIONS" tests/
 
