@@ -3,24 +3,14 @@ name: Robot Tests - invictus-academy-front 👷
 on:
   push:
     branches: [main]
-
   pull_request:
     branches: [main]
-
   workflow_dispatch:
 
 jobs:
   test:
     name: Front Tests Invictus
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: https://github.com/iamalissontomazelli/invictus-academyt14-front-robot.git
 
     steps:
       - run: echo "🚀 Clone repository on Invictus Virtual Machine 🚀"
@@ -33,11 +23,13 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: echo "🌍 Install Chrome Browser 🌍"
-      - name: Install Chrome
+      - run: echo "🌍 Install Chromium + Chromedriver 🌍"
+      - name: Install Chromium
         run: |
           sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
+          sudo apt-get install -y chromium-browser chromium-chromedriver
+          which chromium-browser
+          which chromedriver
 
       - run: echo "➕ Install Dependencies of Invictu's Project ➕"
       - name: Install dependencies
@@ -46,8 +38,8 @@ jobs:
       - run: echo "🤖 Execute tests Frontend of Invictus 🤖"
       - name: Run Robot Framework tests
         env:
-          # garante que o chrome e chromedriver se entendam
-          CHROME_BIN: /usr/bin/google-chrome
+          CHROME_BIN: /usr/bin/chromium-browser
+          CHROMEDRIVER_BIN: /usr/bin/chromedriver
         run: |
           robot --outputdir logs/ tests/
 
