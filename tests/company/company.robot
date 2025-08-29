@@ -3,6 +3,9 @@ Resource        ../../resources/company.resource
 Test Setup      Abrir navegador
 Test Teardown   Fechar navegador
 
+*** Variables ***
+${chrome_options}=    Create Dictionary    args=--headless=new,--no-sandbox,--disable-dev-shm-usage
+
 *** Test Cases ***
 Cadastro de empresa com sucesso
     Passo 1 - Acessar o site
