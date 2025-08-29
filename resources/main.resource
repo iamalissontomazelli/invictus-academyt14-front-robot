@@ -12,7 +12,7 @@ Configurar navegador
     Set Selenium Speed    3s
 
 Abrir o navegador
-    Open Browser    ${urlBase}    ${browser}
+    Open Browser    ${urlBase}    ${browser}   options=${BROWSER_OPTIONS}
     Maximize Browser Window
 
 Fechar o navegador
