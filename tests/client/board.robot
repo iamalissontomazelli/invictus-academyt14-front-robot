@@ -5,6 +5,9 @@ Resource      ../../resources/main.resource
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
+*** Variables ***
+${chrome_options}=    Create Dictionary    args=--headless=new,--no-sandbox,--disable-dev-shm-usage
+
 *** Test Cases ***
 TC01- Cadastrar diretoria com sucesso
     Criar dados do usuário
