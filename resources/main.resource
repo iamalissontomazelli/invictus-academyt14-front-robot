@@ -6,16 +6,18 @@ Library    SeleniumLibrary
 Library   String
 
 
-*** Variables ***
-${chrome_options}=     Create Dictionary     args=--headless=new,--no-sandbox,--disable-dev-shm-usage
+
 
 *** Keywords ***
-  
+Chrome 
+${chrome_options}= Create Dictionary     args=--headless=new,--no-sandbox,--disable-dev-shm-usage
+
 Configurar navegador
     Set Selenium Timeout    10s
     Set Selenium Speed    3s
 
 Abrir o navegador
+    Chrome 
     Open Browser    ${urlBase}    ${browser}   options=${chrome_options}
     Maximize Browser Window
 

@@ -7,9 +7,6 @@ Resource    ../../resources/company.resource
 Test Setup        Abrir o navegador
 Test Teardown     Fechar o navegador
 
-*** Variables ***
-${chrome_options}=    Create Dictionary    args=--headless=new,--no-sandbox,--disable-dev-shm-usage
-
 *** Test Cases ***
 TC01- Cadastrar Cliente com sucesso
     Passo 1 - Acessar o site
