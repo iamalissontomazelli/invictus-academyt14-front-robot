@@ -13,18 +13,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "🚀 Clone repository on Invictus Virtual Machine 🚀"
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - run: echo "🌱 Install Python v3.12 🌱"
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - run: echo "🌍 Install Google Chrome Stable 🌍"
-      - name: Install Google Chrome
+      - name: Install Google Chrome Stable
         run: |
           sudo apt-get update
           sudo apt-get install -y wget gnupg2
@@ -34,19 +31,20 @@ jobs:
           sudo apt-get install -y google-chrome-stable
           google-chrome --version
 
-      - run: echo "➕ Install Dependencies of Invictu's Project ➕"
-      - name: Install dependencies
+      - name: Install project dependencies
         run: pip install -r requirements.txt
 
-      - run: echo "🤖 Execute tests Frontend of Invictus 🤖"
       - name: Run Robot Framework tests
+        env:
+          # Força o Chrome a usar um profile temporário único por execução
+          BROWSER_OPTIONS: "--headless=new --no-sandbox --disable-dev-shm-usage --user-data-dir=/tmp/chrome-${{ github.run_id }}"
         run: |
-          robot --outputdir logs/ tests/
+          robot --loglevel TRACE --outputdir logs/ --variable BROWSER_OPTIONS:"$BROWSER_OPTIONS" tests/
 
-      - run: echo "📝 Saving logs Tests 📝"
       - name: Upload Logs
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: logs-tests
           path: logs/
+
