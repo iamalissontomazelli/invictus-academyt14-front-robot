@@ -1,51 +1,46 @@
 name: Robot Tests - invictus-academy-front 👷
-
+ 
 on:
   push:
     branches: [main]
+ 
   pull_request:
     branches: [main]
   workflow_dispatch:
-
+ 
 jobs:
   test:
     name: Front Tests Invictus
     runs-on: ubuntu-latest
-
+ 
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: https://github.com/iamalissontomazelli/invictus-academyt14-front-robot.git
+ 
     steps:
+      - run: echo "🚀 Clone repository on Invictus Virtual Machine 🚀"
       - name: Checkout Repository
         uses: actions/checkout@v4
-
+ 
+      - run: echo "🌱 Install Python v3.12 🌱"
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Install Google Chrome Stable
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wget gnupg2
-          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
-          google-chrome --version
-
-      - name: Install project dependencies
+ 
+      - run: echo "➕ Install Dependencies of Invictu's Project ➕"
+      - name: Install dependencies
         run: pip install -r requirements.txt
-        
-      - name: Clean up processes
-        run: |
-          echo "Buscando processos do Chrome e Chromedriver para encerrar..."
-          killall chrome || true
-          killall chromedriver || true
-          echo "Processos encerrados (se existiam)."
-
+ 
+      - run: echo "🤖 Execute tests Frontend of Invictus 🤖"
       - name: Run Robot Framework tests
-        # A variável de ambiente BROWSER_OPTIONS foi removida daqui
-        run: |
-          robot --loglevel TRACE --outputdir logs/ tests/
-
+        run: robot --outputdir logs/ tests/
+ 
+      - run: echo "📝 Saving logs Tests 📝"
       - name: Upload Logs
         uses: actions/upload-artifact@v4
         if: always()
