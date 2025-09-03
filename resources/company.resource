@@ -1,21 +1,12 @@
 *** Settings ***
 Resource    variables/companyVariables.resource
 Library     SeleniumLibrary
-
+Resource    ../resources/main.resource
 *** Keywords ***
 Configurar navegador
     Set Selenium Timeout    10s
     Set Selenium Speed      0.5s
 
-Abrir navegador
-    Open Browser    ${urlBase}    ${browser}
-    Maximize Browser Window
-
-Fechar navegador
-    Close Browser
-
-Passo 1 - Acessar o site
-    Go To    ${urlBase}
 
 Passo 2 - Logar
     Wait Until Element Is Visible    ${loginEmailField}    timeout=10s
